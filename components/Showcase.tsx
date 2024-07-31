@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import menu_image from "../../public/images/showcase_image.png";
+import menu_image from "../public/images/showcase_image.png";
 
 export const ShowCase = () => {
   return (
-    <div className="bg-[#FFF9EA] flex h-[800px] items-center justify-between bg-cover bg-center bg-no-repeat bg-showcase">
+    <div className="bg-[#FFF9EA] flex h-[calc(100vh-108px)] items-center justify-between bg-cover bg-center bg-no-repeat bg-showcase">
       <div className="container flex items-center justify-between">
         <div className="flex-1">
           <div>

@@ -1,8 +1,7 @@
 import Image from "next/image";
-import order from "../../public/images/order 1.png";
-import delivery from "../../public/images/delivery 1.png";
-import courier from "../../public/images/courier 1.png";
-import { ReactElement } from "react";
+import order from "../public/images/order 1.png";
+import delivery from "../public/images/delivery 1.png";
+import courier from "../public/images/courier 1.png";
 
 const Item = ({ item }: any) => {
   return (
@@ -48,7 +47,7 @@ export const HowItWork = () => {
   ];
 
   return (
-    <div className="container flex flex-col w-2/3  justify-center items-center mt-[80px]">
+    <div className="container flex flex-col w-2/3  justify-center items-center my-[80px]">
       <h4 className="text-[rgb(255,203,69)] text-[22px]">How it works</h4>
       <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[32px]">
         What We Serve

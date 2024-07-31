@@ -3,7 +3,8 @@ import { Readex_Pro } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
-import { Appbar } from "./Components/Appbar";
+import { Appbar } from "../components/Appbar";
+import { AppContextProvider } from "@/context/appContext";
 
 export const readexPro = Readex_Pro({
   subsets: ["latin"],
@@ -22,14 +23,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn("min-h-screen bg-background  antialiased", readexPro)}
-      >
-        <div>
-          <Appbar />
-          {children}
-        </div>
-      </body>
+      <AppContextProvider>
+        <body
+          className={cn(
+            "min-h-screen bg-background overflow-x-hidden overflow-y-auto  antialiased",
+            readexPro
+          )}
+        >
+          <div>
+            <Appbar />
+            {children}
+          </div>
+        </body>
+      </AppContextProvider>
     </html>
   );
 }
