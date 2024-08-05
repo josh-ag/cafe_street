@@ -1,12 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+
+import { usePathname, useRouter } from "next/navigation";
 
 import signin_icon from "../assets/signin_icon.svg";
 import search_icon from "../assets/search_icon.svg";
-import { useState } from "react";
+
+type AppbarItemType = {
+  name: string;
+  path: string;
+};
 
 /**
  * The `Appbar` component renders the top navigation bar for the application.
@@ -17,6 +23,13 @@ export const Appbar = () => {
   const [isItemInCart, setItemInCart] = useState<boolean>(true);
 
   const pathName = usePathname();
+
+  const app_bar_items: AppbarItemType[] = [
+    { name: "Home", path: "/" },
+    { name: "How It Work", path: "/how_it_work" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
     <div className="bg-[#FFF9EA] h-[108] p-8 flex items-center">
@@ -33,42 +46,19 @@ export const Appbar = () => {
         </Link>
 
         <div className="flex justify-evenly items-center basis-2/5 ">
-          <Link
-            href={"/"}
-            className={`btn text-[rgba(29,29,29,70%)] font-medium py-2 ${
-              pathName === "/" &&
-              "border-b-[rgb(255,203,69)] text-[#1D1D1D] border-b-2"
-            } text-[18px]`}
-          >
-            Home
-          </Link>
-          <Link
-            href={"/howitwork"}
-            className={`btn text-[rgba(29,29,29,70%)] font-medium py-2 ${
-              pathName.includes("/howitwork") &&
-              "border-b-[rgb(255,203,69)] text-[#1D1D1D] border-b-2 font-medium"
-            } text-[18px]`}
-          >
-            How it works
-          </Link>
-          <Link
-            href={"/about"}
-            className={`btn text-[rgba(29,29,29,70%)] font-medium py-2 ${
-              pathName === "/about" &&
-              "border-b-[rgb(255,203,69)] text-[#1D1D1D] border-b-2"
-            } text-[18px]`}
-          >
-            About
-          </Link>
-          <Link
-            href={"/contact"}
-            className={`btn text-[rgba(29,29,29,70%)] font-medium py-2 ${
-              pathName === "/contact" &&
-              "border-b-[rgb(255,203,69)] text-[#1D1D1D] border-b-2"
-            } text-[18px]`}
-          >
-            Contact
-          </Link>
+          {app_bar_items.map((item: AppbarItemType, index) => (
+            <Link
+              key={index}
+              href={item.path}
+              // onClick={() => handleClick(item.path)}
+              className={`btn text-[rgba(29,29,29,70%)] font-medium py-2 ${
+                pathName === item.path &&
+                "border-b-[rgb(255,203,69)] text-[#1D1D1D] border-b-2"
+              } text-[18px]`}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
 
         <div className="flex items-center justify-center">

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { Appbar } from "../components/Appbar";
 import { AppContextProvider } from "@/context/appContext";
+import { Footer } from "@/components/Footer";
 
 export const readexPro = Readex_Pro({
   subsets: ["latin"],
@@ -26,14 +27,13 @@ export default function RootLayout({
       <AppContextProvider>
         <body
           className={cn(
-            "min-h-screen bg-background overflow-x-hidden overflow-y-auto  antialiased",
+            "min-h-screen h-screen bg-background overflow-x-hidden overflow-y-auto  antialiased",
             readexPro
           )}
         >
-          <div>
-            <Appbar />
-            {children}
-          </div>
+          <Appbar />
+          {children}
+          <Footer />
         </body>
       </AppContextProvider>
     </html>
