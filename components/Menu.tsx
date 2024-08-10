@@ -89,7 +89,7 @@ export const Menus = ({
       </h2>
 
       <h4 className="text-[rgba(29,29,29,70%)] w-[611px] text-[22px] text-center mt-[26px]">
-        Our Menus has been carefully curated by the industry's leading
+        Our Menus has been carefully curated by the industry&apos;s leading
         Nutritionists and experts.
       </h4>
 
@@ -109,7 +109,7 @@ export const Menus = ({
           More Menu
         </Link>
 
-        <div className="flex-1 w-full flex items-center  gap-[15px] overflow-auto">
+        <div className="flex-1 w-full flex items-center  gap-[15px]">
           <div className="flex-1 flex flex-col items-stretch">
             <Image src={menu5} className="flex-1 w-full" alt="menu 5" />
             <div className="flex items-center">
@@ -118,7 +118,7 @@ export const Menus = ({
             </div>
           </div>
 
-          <div className="flex-1 w-full flex flex-col gap-[30px] overflow-x-auto overflow-y-hidden">
+          <div className="flex-1 w-full flex flex-col gap-[30px] overflow-x-auto overflow-y-hidden scrollbar-hide">
             <div className="flex flex-col">
               <h4 className="text-[rgb(255,203,69)] text-[22px]">
                 What they say

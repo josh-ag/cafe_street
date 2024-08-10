@@ -7,7 +7,7 @@ import { Appbar } from "../components/Appbar";
 import { AppContextProvider } from "@/context/appContext";
 import { Footer } from "@/components/Footer";
 
-export const readexPro = Readex_Pro({
+const readexPro = Readex_Pro({
   subsets: ["latin"],
   display: "swap",
 });
