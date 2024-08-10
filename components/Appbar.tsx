@@ -51,9 +51,9 @@ export const Appbar = () => {
               key={index}
               href={item.path}
               // onClick={() => handleClick(item.path)}
-              className={`btn text-[rgba(29,29,29,70%)] font-medium py-2 ${
-                pathName === item.path &&
-                "border-b-[rgb(255,203,69)] text-[#1D1D1D] border-b-2"
+              className={`btn text-[rgba(29,29,29,70%)] text-[18px] py-2 ${
+                pathName == item.path &&
+                "border-b-[rgb(255,203,69)] font-medium text-[rgba(29,29,29,100%)]  border-b-2"
               } text-[18px]`}
             >
               {item.name}
