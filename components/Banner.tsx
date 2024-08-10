@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const BannerComponent = () => {
   return (
-    <div className="container flex flex-col gap-[30px] items-center justify-center h-[332px] bg-banner bg-cover bg-center bg-no-repeat rounded-[10px] mb-[80px]">
+    <div className="container flex flex-col gap-[30px] items-center justify-center min-h-[332px] bg-banner bg-cover bg-center bg-no-repeat rounded-[10px] mb-[80px] p-8">
       <h2 className="font-semibold text-[#FFF] text-[32px] text-center w-[35%]">
         Join our member and get discount up to 50%
       </h2>

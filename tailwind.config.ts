@@ -21,6 +21,7 @@ const config = {
       backgroundImage: {
         showcase: "url('/images/showcase_bg.svg')",
         banner: "url('/images/banner2.png')",
+        footer_bg: "url('/images/footer_bg.png')",
       },
       colors: {
         border: "hsl(var(--border))",

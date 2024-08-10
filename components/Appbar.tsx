@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import signin_icon from "../assets/signin_icon.svg";
 import search_icon from "../assets/search_icon.svg";
@@ -45,7 +45,7 @@ export const Appbar = () => {
           />
         </Link>
 
-        <div className="flex justify-evenly items-center basis-2/5 ">
+        <div className="hidden md:flex justify-evenly items-center basis-2/5 ">
           {app_bar_items.map((item: AppbarItemType, index) => (
             <Link
               key={index}

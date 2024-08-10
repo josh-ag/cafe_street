@@ -48,7 +48,7 @@ const MenuItem = ({ item }: { item: MenuTypes }) => {
 
 const CustomerItem = ({ customer }: { customer: CustomerType }) => {
   return (
-    <div className="flex rounded-[10px] min-w-[452px] min-h-[210px]  justify-center flex-col gap-[24px] p-6 bg-[#F1F1F1]">
+    <div className="flex rounded-[10px] min-w-[452px] min-h-[210px]  h-auto justify-center flex-col gap-[24px] p-6 bg-[#F1F1F1]">
       {/* Card_Header */}
       <div className="flex gap-4 items-center">
         <Image
@@ -82,13 +82,15 @@ export const Menus = ({
   customers: CustomerType[];
 }) => {
   return (
-    <div className="container flex flex-col w-2/3 items-center justify-center  mb-[80px]">
-      <h4 className="text-[rgb(255,203,69)] text-[22px]">Our Menus</h4>
-      <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[32px]">
+    <div className="container flex flex-col w-full  mb-[80px]">
+      <h4 className="text-[rgb(255,203,69)] self-center text-[22px]">
+        Our Menus
+      </h4>
+      <h2 className="font-semibold self-center text-[rgba(29,29,29,1)] text-[32px]">
         Our Popular Menus
       </h2>
 
-      <h4 className="text-[rgba(29,29,29,70%)] w-[611px] text-[22px] text-center mt-[26px]">
+      <h4 className="text-[rgba(29,29,29,70%)] w-[611px] text-[22px] text-center mt-[26px] self-center">
         Our Menus has been carefully curated by the industry&apos;s leading
         Nutritionists and experts.
       </h4>
@@ -100,7 +102,6 @@ export const Menus = ({
       </div>
 
       {/* More Menu  */}
-
       <div className="flex w-full flex-col justify-between mt-[80px] gap-[45px]">
         <Link
           href={"/more_menu"}
