@@ -82,7 +82,7 @@ export const Menus = ({
   customers: CustomerType[];
 }) => {
   return (
-    <div className="container flex flex-col w-2/3  justify-center  mb-[80px]">
+    <div className="container flex flex-col w-2/3 items-center justify-center  mb-[80px]">
       <h4 className="text-[rgb(255,203,69)] text-[22px]">Our Menus</h4>
       <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[32px]">
         Our Popular Menus
