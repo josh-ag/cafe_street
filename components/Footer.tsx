@@ -25,7 +25,9 @@ const FooterItem = ({ item }: { item: FooterListType }) => {
               {item.name}
             </Link>
           ) : (
-            <h4 className="">{item.name}</h4>
+            <h4 key={index} className="">
+              {item.name}
+            </h4>
           )
         )}
       </div>
