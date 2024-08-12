@@ -11,11 +11,14 @@ export default function Home() {
   const { menuList, customers } = useContext(AppContext);
 
   return (
-    <main className="flex-1 flex flex-col">
+    <main className="w-full h-auto">
       <ShowCase />
-      <HowItWork />
-      <Menus menuList={menuList} customers={customers} />
-      <BannerComponent />
+
+      <div className="container">
+        <HowItWork />
+        <Menus menuList={menuList} customers={customers} />
+        <BannerComponent />
+      </div>
     </main>
   );
 }

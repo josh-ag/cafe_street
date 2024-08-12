@@ -13,7 +13,6 @@ const FooterItem = ({ item }: { item: FooterListType }) => {
     <div className="flex flex-col w-full  gap-[20px]">
       <h2 className="text-[20px] text-[#1D1D1D] font-bold">{item.title}</h2>
 
-      {/* //sub_list  */}
       <div className="flex flex-col gap-[16px]">
         {item.sub_list.map((item: ItemType, index: number) =>
           item.path ? (
@@ -65,9 +64,9 @@ export const Footer = () => {
   ];
 
   return (
-    <div className="flex-1 flex  w-full bg-footer_bg items-center  bg-cover bg-center bg-no-repeat h-auto py-8 min-h-[500px]">
+    <div className="flex  w-full bg-footer_bg items-center  bg-cover bg-center bg-no-repeat h-auto py-8 min-h-[500px]">
       <div className="container h-auto w-full flex flex-col gap-[45px]">
-        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-[91px]">
+        <div className="flex  flex-wrap-reverse md:flex-nowrap items-center justify-center gap-[91px]">
           <div className="basis-1/3 flex gap-8 flex-col justify-center">
             {/* logo */}
             <Link href={"/"}>

@@ -27,7 +27,7 @@ export default function RootLayout({
       <AppContextProvider>
         <body
           className={cn(
-            "min-h-screen h-screen bg-background overflow-x-hidden overflow-y-auto  antialiased",
+            "min-h-screen flex flex-col h-auto w-auto bg-background overflow-x-hidden  overflow-y-auto  antialiased scrollbar-hide",
             readexPro
           )}
         >

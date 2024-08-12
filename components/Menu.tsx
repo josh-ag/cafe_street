@@ -8,7 +8,7 @@ import menu7 from "@/public/images/menu7.png";
 
 const MenuItem = ({ item }: { item: MenuTypes }) => {
   return (
-    <div className="card shadow-md  w-[280px] h-[371px] bg-[#F1F1F1] rounded-[10px] gap-6 cursor-auto flex flex-col items-center justify-between">
+    <div className="card shadow-md  w-[280px] h-auto min-h-[371px] bg-[#F1F1F1] rounded-[10px] gap-6 cursor-auto flex flex-col items-center justify-between">
       {/* Card--Cover--Header  */}
 
       <div className="basis-3/4 flex items-center justify-center ">
@@ -90,12 +90,12 @@ export const Menus = ({
         Our Popular Menus
       </h2>
 
-      <h4 className="text-[rgba(29,29,29,70%)] w-[611px] text-[22px] text-center mt-[26px] self-center">
+      <h4 className="text-[rgba(29,29,29,70%)] w-auto md:w-[611px] text-[18px] lg:text-[22px] text-center mt-[26px] self-center">
         Our Menus has been carefully curated by the industry&apos;s leading
         Nutritionists and experts.
       </h4>
 
-      <div className="mt-[80px]   flex justify-between items-center gap-6">
+      <div className="mt-[80px]  flex justify-center lg:justify-between items-center gap-6 flex-wrap lg:flex-nowrap">
         {menuList.map((item: any, index: number) => (
           <MenuItem item={item} key={index} />
         ))}
@@ -110,16 +110,16 @@ export const Menus = ({
           More Menu
         </Link>
 
-        <div className="flex-1 w-full flex items-center  gap-[15px]">
-          <div className="flex-1 flex flex-col items-stretch">
+        <div className="flex-1 w-full flex items-center  gap-[15px] flex-wrap lg:flex-nowrap">
+          <div className="flex w-full flex-col items-stretch justify-center">
             <Image src={menu5} className="flex-1 w-full" alt="menu 5" />
             <div className="flex items-center">
-              <Image src={menu6} alt="menu 6" className="h-full w-full" />
-              <Image src={menu7} alt="menu 7" className="h-full w-full" />
+              <Image src={menu6} alt="menu 6" className="h-full w-1/2" />
+              <Image src={menu7} alt="menu 7" className="h-full w-1/2" />
             </div>
           </div>
 
-          <div className="flex-1 w-full flex flex-col gap-[30px] overflow-x-auto overflow-y-hidden scrollbar-hide">
+          <div className="w-full flex flex-col gap-[30px] overflow-x-auto overflow-y-hidden scrollbar-hide">
             <div className="flex flex-col">
               <h4 className="text-[rgb(255,203,69)] text-[22px]">
                 What they say
