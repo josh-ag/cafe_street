@@ -19,12 +19,12 @@ const FooterItem = ({ item }: { item: FooterListType }) => {
             <Link
               href={item?.path}
               key={index}
-              className="text-[18px] text-[rgba(29,29,29,70%)] font-normal"
+              className="text-[16px] lg:text-[18px] text-[rgba(29,29,29,70%)] font-normal"
             >
               {item.name}
             </Link>
           ) : (
-            <h4 key={index} className="">
+            <h4 key={index} className="text-[16px] lg:text-[18px]">
               {item.name}
             </h4>
           )
@@ -79,7 +79,7 @@ export const Footer = () => {
               />
             </Link>
 
-            <h2 className="center text-[20px] text-[rgba(29,29,29,70)] w-3/4">
+            <h2 className="center text-[18px] lg:text-[20px] text-[rgba(29,29,29,70)] w-3/4">
               Jalan Semangka Raya, Telaga Murni,Cikarang Barat, Kab. Bekasi
             </h2>
 

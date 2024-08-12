@@ -4,7 +4,7 @@ import menu_image from "../public/images/showcase_image.png";
 
 export const ShowCase = () => {
   return (
-    <div className="bg-[#FFF9EA] min-h-[700px] h-auto bg-cover bg-center bg-no-repeat flex py-8 items-center justify-center bg-showcase">
+    <div className="bg-[#FFF9EA] min-h-[calc(100vh-70px)] h-auto bg-cover bg-center bg-no-repeat flex py-8 items-center justify-center bg-showcase">
       <div className="container flex items-center justify-center flex-wrap-reverse lg:flex-nowrap gap-10">
         <div className="flex flex-col  w-full gap-2">
           <div>
@@ -34,7 +34,7 @@ export const ShowCase = () => {
             priority
             src={menu_image}
             alt="showcase menu"
-            className="lg:scale-75"
+            className="scale-90 lg:scale-100"
           />
         </div>
       </div>

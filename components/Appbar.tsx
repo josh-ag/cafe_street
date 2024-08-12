@@ -33,7 +33,7 @@ export const Appbar = () => {
   ];
 
   return (
-    <div className="bg-[#FFF9EA]  flex items-center justify-between min-h-[108px]">
+    <div className="bg-[#FFF9EA]  flex items-center justify-between h-[73px] ">
       <div className="container flex w-full items-center justify-between gap-10">
         {/* logo */}
         <Link href={"/"}>
