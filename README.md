@@ -1,4 +1,4 @@
-# cafe_street
+# Cafe Street ![Cafe Street Logo](/public/logo_coffe.svg)
 
 This is Reproducible through the following steps:
 
