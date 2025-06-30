@@ -7,10 +7,10 @@ const Item = ({ item }: any) => {
   return (
     <div className="w-2/4 lg:w-1/4 h-auto min-h-[371px]rounded-[10px] gap-6 cursor-auto flex flex-col items-center justify-between">
       <div className="flex flex-col items-center justify-center gap-1">
-        <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[22px] md:text-[28px] lg:text-[32px]">
+        <h2 className="font-semibold text-center text-[rgba(29,29,29,1)] text-[22px] md:text-[28px] lg:text-[32px]">
           {item.title}
         </h2>
-        <h4 className="text-[rgba(29,29,29,70%)] w-[611px] text-[18px] lg:text-[22px] text-center">
+        <h4 className="text-[rgba(29,29,29,70%)]  text-[18px] lg:text-[22px] text-center">
           {item.text}
         </h4>
       </div>
@@ -47,10 +47,10 @@ export const HowItWork = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-8 my-[81px]">
+    <div className="flex flex-col items-center justify-center gap-8 my-[6rem]">
       <div className="flex flex-col items-center justify-center">
         <h4 className="text-[#ffcb47] text-[22px]">How it works</h4>
-        <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[32px]">
+        <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[22px] md:text-[28px] lg:text-[32px]">
           What We Serve
         </h2>
 
@@ -60,7 +60,7 @@ export const HowItWork = () => {
         </h4>
       </div>
 
-      <div className="mt-[80px]  flex justify-center lg:justify-between items-center gap-6 flex-wrap lg:flex-nowrap">
+      <div className="w-full mt-[2rem] flex justify-center items-center gap-6 flex-wrap lg:justify-between">
         {stepList.map((item: any, index: number) => (
           <Item item={item} key={index} />
         ))}

@@ -82,11 +82,11 @@ export const Menus = ({
   customers: CustomerType[];
 }) => {
   return (
-    <div className="container flex flex-col w-full  mb-[80px]">
+    <div className="flex flex-col w-full  mb-[6rem]">
       <h4 className="text-[rgb(255,203,69)] text-center text-[22px]">
         Our Menus
       </h4>
-      <h2 className="font-semibold text-center text-[rgba(29,29,29,1)] text-[32px]">
+      <h2 className="font-semibold text-center text-[rgba(29,29,29,1)] text-[22px] md:text-[28px] lg:text-[32px]">
         Our Popular Menus
       </h2>
 
@@ -102,34 +102,36 @@ export const Menus = ({
       </div>
 
       {/* More Menu  */}
-      <div className="flex w-full flex-col justify-between mt-[80px] gap-[45px]">
-        <Link
-          href={"/more_menu"}
-          className="btn self-center  flex items-center justify-center  bg-[#FFCB45]  py-2 px-8 font-bold rounded-full text-[14]"
-        >
-          More Menu
-        </Link>
+      <div className="mt-[6rem] gap-[1rem]">
+        <div className="w-full mb-[1rem] flex items-center justify-center">
+          <Link
+            href={"/more_menu"}
+            className="btn bg-[#FFCB45]   py-2 px-8 font-bold rounded-full text-[14]"
+          >
+            More Menu
+          </Link>
+        </div>
 
-        <div className="flex-1 w-full flex items-center  gap-[15px] flex-wrap lg:flex-nowrap">
-          <div className="flex w-full flex-col items-stretch justify-center">
-            <Image src={menu5} className="flex-1 w-full" alt="menu 5" />
-            <div className="flex items-center">
-              <Image src={menu6} alt="menu 6" className="h-full w-1/2" />
-              <Image src={menu7} alt="menu 7" className="h-full w-1/2" />
+        <div className="w-full flex items-center justify-between  gap-[2rem] flex-wrap lg:flex-nowrap">
+          <div className="w-full lg:w-1/2 flex flex-col items-stretch">
+            <div className={`w-full bg-menu5 bg-cover bg-no-repeat h-80`} />
+            <div className="flex justify-between">
+              <div className={`w-full bg-menu6 bg-cover bg-no-repeat h-80`} />
+              <div className={`w-full bg-menu7 bg-cover bg-no-repeat h-80`} />
             </div>
           </div>
 
-          <div className="w-full flex flex-col gap-[30px] overflow-x-auto overflow-y-hidden scrollbar-hide">
+          <div className="w-full lg:w-1/2 flex flex-col gap-4 md:gap-[30px]">
             <div className="flex flex-col">
               <h4 className="text-[rgb(255,203,69)] text-[22px]">
                 What they say
               </h4>
-              <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[32px]">
+              <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[22px] md:text-[28px] lg:text-[32px]">
                 What Our Customers Say About Us
               </h2>
             </div>
 
-            <div className="w-full flex items-center p-2 gap-4">
+            <div className="w-full flex items-center p-2 gap-4 overflow-x-auto overflow-y-hidden scrollbar-hide">
               {customers.map((customer: CustomerType, index) => (
                 <CustomerItem customer={customer} key={index} />
               ))}

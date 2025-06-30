@@ -22,6 +22,9 @@ const config = {
         showcase: "url('/images/showcase_bg.svg')",
         banner: "url('/images/banner2.png')",
         footer_bg: "url('/images/footer_bg.png')",
+        menu5: "url('/images/menu5.png')",
+        menu6: "url('/images/menu6.png')",
+        menu7: "url('/images/menu7.png')",
       },
       colors: {
         border: "hsl(var(--border))",
