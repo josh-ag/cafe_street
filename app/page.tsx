@@ -8,7 +8,7 @@ import { AppContext } from "@/context/appContext";
 import { BannerComponent } from "@/components/Banner";
 
 export default function Home() {
-  const { menuList, customers } = useContext(AppContext);
+  const { menuList, customers, customer_fav } = useContext(AppContext);
 
   return (
     <main className="w-full h-auto">

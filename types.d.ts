@@ -1,6 +1,8 @@
 export interface AppContextInterface {
   menuList: MenuTypes[];
   customers: CustomerType[];
+  customer_fav: any;
+  addOrRemoveFromCustomerFav: any;
 }
 
 export type MenuTypes = {
@@ -8,7 +10,6 @@ export type MenuTypes = {
   price: string;
   ID: string;
   description: string;
-  is_fav: boolean;
   cover_img: any;
 };
 

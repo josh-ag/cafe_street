@@ -8,15 +8,15 @@ export const ShowCase = () => {
       <div className="container flex items-center justify-center flex-wrap-reverse lg:flex-nowrap gap-10">
         <div className="flex flex-col  w-full gap-2">
           <div>
-            <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[28px] md:text-[32px] lg:text-[48px]">
+            <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[28px] md:text-[32px] lg:text-[48px] md:font-[900]">
               Be The Fastest In
             </h2>
-            <h2 className="font-semibold text-[28px] md:text-[32px] lg:text-[48px] text-[rgba(29,29,29,1)]">
+            <h2 className="font-semibold text-[28px] md:text-[32px] lg:text-[48px] text-[rgba(29,29,29,1)] md:font-[900]">
               Delivery Your <span className="text-[#FFCB45]">Food</span>
             </h2>
           </div>
 
-          <p className="text-[rgba(29,29,29,70%)] w-2/4 text-[18px] lg:text-[22px]">
+          <p className="text-[rgba(29,29,29,70%)] w-full md:w-3/4 text-[18px] lg:text-[22px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
             purus sit amet
           </p>

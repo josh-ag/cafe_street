@@ -2,11 +2,15 @@ import { CustomerType, MenuTypes } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 
-import menu5 from "@/public/images/menu5.png";
-import menu6 from "@/public/images/menu6.png";
-import menu7 from "@/public/images/menu7.png";
+import { useContext } from "react";
+import { AppContext } from "@/context/appContext";
 
 const MenuItem = ({ item }: { item: MenuTypes }) => {
+  const { customer_fav, addOrRemoveFromCustomerFav } = useContext(AppContext);
+
+  // console.log("CustomerFavs: ", customer_fav);
+  const isFound = customer_fav.find((i) => i == item.ID);
+
   return (
     <div className="card shadow-md  w-[280px] h-auto min-h-[371px] bg-[#F1F1F1] rounded-[10px] gap-6 cursor-auto flex flex-col items-center justify-between">
       {/* Card--Cover--Header  */}
@@ -19,14 +23,17 @@ const MenuItem = ({ item }: { item: MenuTypes }) => {
       <div className="footer h-[112px] basis-2/4  rounded-tl-[40%] rounded-tr-[40%] w-full  bg-[#FFF] flex  flex-col gap-[13px] items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-1 mt-[22px]">
           <h4 className="text-[20px] font-semibold text-center">{item.name}</h4>
-          <p className="text-[16px] text-center color-[rgba(29,29,29,70%)]">
+          <p className="text-[16px] text-center text-[#2c2c2cc5]">
             {item.description}
           </p>
         </div>
 
         <div className="flex w-full items-center justify-between px-[22px] mb-[22px]">
           <h4 className="text-[20px] font-semibold">$ {item.price}</h4>
-          <Link href={`/carts/${item.ID}`} className="btn">
+          <button
+            className="btn"
+            onClick={() => addOrRemoveFromCustomerFav(item.ID)}
+          >
             <svg
               width="24"
               height="24"
@@ -36,10 +43,10 @@ const MenuItem = ({ item }: { item: MenuTypes }) => {
             >
               <path
                 d="M11.9646 6.12862C8.29143 0.454909 0.857147 3.54577 0.857147 9.72634C0.857147 14.3675 11.0491 21.6275 11.9646 22.5715C12.8863 21.6275 22.5714 14.3675 22.5714 9.72634C22.5714 3.59262 15.6446 0.454909 11.9646 6.12862Z"
-                fill={item?.is_fav ? "#FFCB45" : "rgba(29,29,29,70%)"}
+                fill={isFound ? "#FFCB45" : "rgba(29,29,29,70%)"}
               />
             </svg>
-          </Link>
+          </button>
         </div>
       </div>
     </div>
@@ -77,20 +84,22 @@ const CustomerItem = ({ customer }: { customer: CustomerType }) => {
 export const Menus = ({
   menuList,
   customers,
+  customer_fav,
 }: {
   menuList: MenuTypes[];
   customers: CustomerType[];
+  customer_fav: string[];
 }) => {
   return (
     <div className="flex flex-col w-full  mb-[6rem]">
-      <h4 className="text-[rgb(255,203,69)] text-center text-[22px]">
+      <h4 className="text-[rgb(255,203,69)] text-center font-semibold text-[18px] mb-2">
         Our Menus
       </h4>
-      <h2 className="font-semibold text-center text-[rgba(29,29,29,1)] text-[22px] md:text-[28px] lg:text-[32px]">
+      <h2 className="font-semibold text-center text-[rgba(29,29,29,1)] text-[18px] md:text-[22px]">
         Our Popular Menus
       </h2>
 
-      <h4 className="text-[rgba(29,29,29,70%)] w-auto md:w-[611px] text-[18px] lg:text-[22px] text-center mt-[26px] self-center">
+      <h4 className="text-[rgba(29,29,29,70%)] w-auto md:w-[611px] text-[16px] md:text-[18px] text-center mt-2 self-center">
         Our Menus has been carefully curated by the industry&apos;s leading
         Nutritionists and experts.
       </h4>
@@ -123,10 +132,10 @@ export const Menus = ({
 
           <div className="w-full lg:w-1/2 flex flex-col gap-4 md:gap-[30px]">
             <div className="flex flex-col">
-              <h4 className="text-[rgb(255,203,69)] text-[22px]">
+              <h4 className="text-[rgb(255,203,69)] text-[18px] font-semibold">
                 What they say
               </h4>
-              <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[22px] md:text-[28px] lg:text-[32px]">
+              <h2 className="font-semibold text-[rgba(29,29,29,1)] text-[18px] md:text-[22px]">
                 What Our Customers Say About Us
               </h2>
             </div>

@@ -10,7 +10,6 @@ export const MenuList: MenuTypes[] = [
   {
     name: "Mie Ramen",
     description: "Lorem ipsum dolor",
-    is_fav: true,
     ID: "001",
     price: "20.02",
     cover_img: Mie_Ramen,
@@ -19,7 +18,6 @@ export const MenuList: MenuTypes[] = [
   {
     name: "Roti Bakar",
     description: "Lorem ipsum dolor",
-    is_fav: false,
     ID: "002",
     price: "20.02",
     cover_img: Rotie_Bakar,
@@ -28,7 +26,6 @@ export const MenuList: MenuTypes[] = [
   {
     name: "Salad Tahu",
     description: "Lorem ipsum dolor",
-    is_fav: false,
     ID: "003",
     price: "20.02",
     cover_img: Salad_Tahu,
@@ -37,7 +34,6 @@ export const MenuList: MenuTypes[] = [
   {
     name: "Spaghetti",
     description: "Lorem ipsum dolor",
-    is_fav: false,
     ID: "004",
     price: "20.02",
     cover_img: Spaghetti,
